@@ -1,0 +1,26 @@
+PODS:
+  - DatePickerDialog (1.1.7)
+  - InputValidator (1.0.3):
+    - Validation (~> 1.0.2)
+  - Realm (3.0.0-beta):
+    - Realm/Headers (= 3.0.0-beta)
+  - Realm/Headers (3.0.0-beta)
+  - RealmSwift (3.0.0-beta):
+    - Realm (= 3.0.0-beta)
+  - Validation (1.0.2)
+
+DEPENDENCIES:
+  - DatePickerDialog (~> 1.1)
+  - InputValidator (~> 1.0)
+  - RealmSwift (= 3.0.0-beta)
+
+SPEC CHECKSUMS:
+  DatePickerDialog: bd5e7e92e4da2c6a8966b28d5f5d8f335d6c2c63
+  InputValidator: b77aa9ea2d5f156ab489f9f9b899da73b839e202
+  Realm: 7b77385c9132bab2cbe65cdb76f316da43ce3b2d
+  RealmSwift: 9f90214b2ea3f0eac85a583787983b0c41670283
+  Validation: 76e9cb543542ebc7ebc0aedb7a8a26c29082eaa5
+
+PODFILE CHECKSUM: 8658546f49172acab2e40366acb37be619e9a5be
+
+COCOAPODS: 1.2.0
