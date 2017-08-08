@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LO9-PB-Rbo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My Contacts-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Contacts" id="BYZ-38-t0r" customClass="ViewController" customModule="MyContacts" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,136 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kg8-tm-0xi">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lB8-lN-8NK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kg8-tm-0xi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BPV-GI-u2e"/>
+                            <constraint firstItem="kg8-tm-0xi" firstAttribute="top" secondItem="lB8-lN-8NK" secondAttribute="bottom" id="Oc8-ZW-J3C"/>
+                            <constraint firstAttribute="trailing" secondItem="kg8-tm-0xi" secondAttribute="trailing" id="Y3d-vd-qPl"/>
+                            <constraint firstItem="lB8-lN-8NK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YUb-qe-WDR"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kg8-tm-0xi" secondAttribute="bottom" id="beN-zr-ZH6"/>
+                            <constraint firstItem="lB8-lN-8NK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="qeF-ZL-bH1"/>
+                            <constraint firstAttribute="trailing" secondItem="lB8-lN-8NK" secondAttribute="trailing" id="xOT-5Y-PW3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="My Contacts" id="OHj-wz-m53">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HGE-8i-T5E">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="4Tk-e1-kOO" kind="presentation" identifier="creatorSegue" id="kAk-I6-acT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="J3N-76-RaJ" kind="show" identifier="contactSegue" id="QCa-w7-c6n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="718" y="124"/>
+        </scene>
+        <!--Create Contact-->
+        <scene sceneID="8Sc-T9-Idm">
+            <objects>
+                <viewController title="Create Contact" id="43r-qB-jgR" customClass="CreateViewController" customModule="MyContacts" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bBr-qC-e1x"/>
+                        <viewControllerLayoutGuide type="bottom" id="NfD-sc-aWe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5ml-Vo-c82">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create Contact" id="dhw-sQ-hsi">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="4jE-Nu-5db">
+                            <connections>
+                                <action selector="unwindToPreviousViewController:" destination="43r-qB-jgR" id="yOO-rx-Vpr"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="uZz-i1-K9P">
+                            <connections>
+                                <action selector="hideCreator:" destination="43r-qB-jgR" id="UB5-5v-KzO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bv0-9t-3fn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2334" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xqE-U4-7MX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LO9-PB-Rbo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Sm-SB-leg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7Y3-bc-4pb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFR-o8-Eb8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A92-0M-11r">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4Tk-e1-kOO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZaE-M1-1nA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="43r-qB-jgR" kind="relationship" relationship="rootViewController" id="J9o-mt-N3W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SpQ-5t-lKp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1558" y="124"/>
+        </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="V3S-EY-cOv">
+            <objects>
+                <viewController id="J3N-76-RaJ" customClass="ContactViewController" customModule="MyContacts" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jgw-Ur-6G7"/>
+                        <viewControllerLayoutGuide type="bottom" id="zcG-Mk-8Tb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uaw-YU-aHi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HB0-Vm-B17">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="4NV-eP-0L3">
+                            <connections>
+                                <segue destination="4Tk-e1-kOO" kind="presentation" id="JT4-5P-I7Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdN-9J-2RB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="893"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="kAk-I6-acT"/>
+    </inferredMetricsTieBreakers>
 </document>

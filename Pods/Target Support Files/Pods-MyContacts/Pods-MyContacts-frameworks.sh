@@ -87,6 +87,21 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/DatePickerDialog/DatePickerDialog.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/InputValidator/InputValidator.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Validation/Validation.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/DatePickerDialog/DatePickerDialog.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/InputValidator/InputValidator.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Validation/Validation.framework"
+fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi

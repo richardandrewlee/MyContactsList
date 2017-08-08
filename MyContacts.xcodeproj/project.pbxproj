@@ -16,6 +16,12 @@
 		6A365F8B1F3A157D007474B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A365F891F3A157D007474B9 /* LaunchScreen.storyboard */; };
 		6A365F961F3A157D007474B9 /* MyContactsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A365F951F3A157D007474B9 /* MyContactsTests.swift */; };
 		6A365FA11F3A157D007474B9 /* MyContactsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A365FA01F3A157D007474B9 /* MyContactsUITests.swift */; };
+		6A365FB01F3A20F1007474B9 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A365FAF1F3A20F1007474B9 /* Contact.swift */; };
+		6A365FB21F3A2234007474B9 /* ContactStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A365FB11F3A2234007474B9 /* ContactStorage.swift */; };
+		6ABEC9D31F3A2FF200C51B4E /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABEC9D21F3A2FF200C51B4E /* Theme.swift */; };
+		6ABEC9D51F3A350100C51B4E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABEC9D41F3A350100C51B4E /* BaseViewController.swift */; };
+		6ABEC9D71F3A353300C51B4E /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABEC9D61F3A353300C51B4E /* CreateViewController.swift */; };
+		6ABEC9D91F3A3E8000C51B4E /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ABEC9D81F3A3E8000C51B4E /* ContactViewController.swift */; };
 		FC5D129FC2E2DDB5BE50E977 /* Pods_MyContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0AD20A9F8ABFFF57B32B00E /* Pods_MyContacts.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +61,12 @@
 		6A365F9C1F3A157D007474B9 /* MyContactsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyContactsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A365FA01F3A157D007474B9 /* MyContactsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContactsUITests.swift; sourceTree = "<group>"; };
 		6A365FA21F3A157D007474B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A365FAF1F3A20F1007474B9 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		6A365FB11F3A2234007474B9 /* ContactStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactStorage.swift; sourceTree = "<group>"; };
+		6ABEC9D21F3A2FF200C51B4E /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		6ABEC9D41F3A350100C51B4E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		6ABEC9D61F3A353300C51B4E /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		6ABEC9D81F3A3E8000C51B4E /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		A0AD20A9F8ABFFF57B32B00E /* Pods_MyContacts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyContacts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA7CD6E0BDBEA09B04248CE /* Pods-MyContactsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyContactsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyContactsTests/Pods-MyContactsTests.release.xcconfig"; sourceTree = "<group>"; };
 		CA322B16C3BE47F1B3444C68 /* Pods-MyContactsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyContactsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyContactsUITests/Pods-MyContactsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,10 +140,10 @@
 			isa = PBXGroup;
 			children = (
 				6A365F801F3A157D007474B9 /* AppDelegate.swift */,
-				6A365F821F3A157D007474B9 /* ViewController.swift */,
-				6A365F841F3A157D007474B9 /* Main.storyboard */,
-				6A365F871F3A157D007474B9 /* Assets.xcassets */,
-				6A365F891F3A157D007474B9 /* LaunchScreen.storyboard */,
+				6A365FAE1F3A209E007474B9 /* Storage */,
+				6A365FB31F3A22C2007474B9 /* Service */,
+				6A365FB51F3A22E7007474B9 /* Business */,
+				6A365FB41F3A22DD007474B9 /* UI */,
 				6A365F8C1F3A157D007474B9 /* Info.plist */,
 			);
 			path = MyContacts;
@@ -153,6 +165,44 @@
 				6A365FA21F3A157D007474B9 /* Info.plist */,
 			);
 			path = MyContactsUITests;
+			sourceTree = "<group>";
+		};
+		6A365FAE1F3A209E007474B9 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				6A365FAF1F3A20F1007474B9 /* Contact.swift */,
+				6A365FB11F3A2234007474B9 /* ContactStorage.swift */,
+			);
+			name = Storage;
+			sourceTree = "<group>";
+		};
+		6A365FB31F3A22C2007474B9 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		6A365FB41F3A22DD007474B9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6A365F821F3A157D007474B9 /* ViewController.swift */,
+				6ABEC9D41F3A350100C51B4E /* BaseViewController.swift */,
+				6ABEC9D61F3A353300C51B4E /* CreateViewController.swift */,
+				6ABEC9D81F3A3E8000C51B4E /* ContactViewController.swift */,
+				6ABEC9D21F3A2FF200C51B4E /* Theme.swift */,
+				6A365F841F3A157D007474B9 /* Main.storyboard */,
+				6A365F871F3A157D007474B9 /* Assets.xcassets */,
+				6A365F891F3A157D007474B9 /* LaunchScreen.storyboard */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		6A365FB51F3A22E7007474B9 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Business;
 			sourceTree = "<group>";
 		};
 		A1D681282499F0EEC590AAEB /* Frameworks */ = {
@@ -449,8 +499,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A365FB21F3A2234007474B9 /* ContactStorage.swift in Sources */,
+				6ABEC9D91F3A3E8000C51B4E /* ContactViewController.swift in Sources */,
+				6A365FB01F3A20F1007474B9 /* Contact.swift in Sources */,
+				6ABEC9D71F3A353300C51B4E /* CreateViewController.swift in Sources */,
+				6ABEC9D31F3A2FF200C51B4E /* Theme.swift in Sources */,
 				6A365F831F3A157D007474B9 /* ViewController.swift in Sources */,
 				6A365F811F3A157D007474B9 /* AppDelegate.swift in Sources */,
+				6ABEC9D51F3A350100C51B4E /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -709,6 +765,7 @@
 				6A365FA71F3A157D007474B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A365FA81F3A157D007474B9 /* Build configuration list for PBXNativeTarget "MyContactsTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +774,7 @@
 				6A365FAA1F3A157D007474B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6A365FAB1F3A157D007474B9 /* Build configuration list for PBXNativeTarget "MyContactsUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +783,7 @@
 				6A365FAD1F3A157D007474B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
