@@ -2,7 +2,7 @@
 //  BaseViewController.swift
 //  MyContacts
 //
-//  Created by Courtney Lee on 8/8/17.
+//  Created by Richard Lee on 8/8/17.
 //  Copyright © 2017 Richard Lee. All rights reserved.
 //
 
@@ -12,6 +12,9 @@ import UIKit
 class BaseViewController : UIViewController {
     
     var NavigationController : UINavigationController?
+    
+    
+    // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,8 @@ class BaseViewController : UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Styles and Functionality
     
     func setNavbarStyle(){
         NavigationController = self.navigationController!

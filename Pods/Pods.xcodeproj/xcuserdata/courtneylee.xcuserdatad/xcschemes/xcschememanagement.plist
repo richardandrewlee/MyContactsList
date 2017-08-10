@@ -4,12 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DatePickerDialog.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>InputValidator.xcscheme</key>
+		<key>PhoneNumberKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -39,7 +34,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Validation.xcscheme</key>
+		<key>UDatePicker.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,22 +42,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0614D8C792E068C38FFE6FA551641CB9</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>184A1650DC0B648BD756068E60BF2C59</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>2A2CE52F9E8C8361DF5B5CEDAA640005</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5C41F90903038E5BEFB39A22A6DD8C07</key>
+		<key>52343D46A8777734FBF0A5E37E709A53</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A57B2630F9E9C3EB8D97FF014D5FC63E</key>
+		<key>78C59616C64A853BE2EE4F617BE7769A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B88DB06C9BC379EACEB2A6494DB23CA0</key>
+		<key>8C5BD10883BD185426DD737247F56DEC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>932C33FA7D9DA8C8A162853CEC8D32D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>96B2786EA7D65A420A913BC0390A1D66</key>
 		<dict>
 			<key>primary</key>
 			<true/>

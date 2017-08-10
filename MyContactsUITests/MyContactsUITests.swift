@@ -2,7 +2,7 @@
 //  MyContactsUITests.swift
 //  MyContactsUITests
 //
-//  Created by Courtney Lee on 8/8/17.
+//  Created by Richard Lee on 8/8/17.
 //  Copyright © 2017 Richard Lee. All rights reserved.
 //
 

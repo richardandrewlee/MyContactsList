@@ -2,31 +2,26 @@
 //  ContactStorage.swift
 //  MyContacts
 //
-//  Created by Courtney Lee on 8/8/17.
+//  Created by Richard Lee on 8/8/17.
 //  Copyright © 2017 Richard Lee. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-class StoreLocation {
-    //static var store = StoreLocation()
+class ContactStorage {
+    
+    static var store = ContactStorage()
     
     // Notifications on item model
     var notificationToken : NotificationToken? = nil
     let realm = try! Realm()
-    var locations: Results<Contact> {
+    var contacts : Results<Contact> {
         get {
-            return realm.objects(Contact.self).sorted(byKeyPath: "lastName", ascending: true)
+            return realm.objects(Contact.self).sorted(byKeyPath: "sortString", ascending: true)
         }
     }
-    var selectedItem : Contact!
-    enum sortBy {
-        case date, title
-    }
-    
-    var sortMethod = sortBy.date
-    var dateFormatter = DateFormatter()
+    var searched : Results<Contact>!
     
     init(){
         print("Storage Init")
@@ -41,12 +36,12 @@ class StoreLocation {
     func observe(){
         print("observing")
         // Observe Results Notifications
-        notificationToken = locations.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+        notificationToken = contacts.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
             // guard let tableView = self?.tableView else { return }
             switch changes {
             case .initial, .update(_, deletions: _, insertions: _, modifications: _):
                 // Results are now populated and can be accessed without blocking the UI
-                //print("contents of realm \(self?.locations)")
+                //print("contents of realm \(self?.contacts)")
                 break
                 
             case .error(let error):
@@ -73,5 +68,6 @@ class StoreLocation {
             realm.add(contact)
         })
     }
+
     
 }
